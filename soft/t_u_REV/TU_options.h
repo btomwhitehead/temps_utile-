@@ -10,7 +10,7 @@
 /* ------------ Northern Light 4U Model 2TT -----------------------------------  */
 //#define MODEL_2TT
 //* ----------- flip screen --------------------------------------------------  */
-#define FLIP_180
+//#define FLIP_180
 /* ------------ invert screen pixels ------------------------------------------  */
 //#define INVERT_DISPLAY
 

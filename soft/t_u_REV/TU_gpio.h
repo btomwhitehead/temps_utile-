@@ -49,13 +49,23 @@
 #define OLED_CS_ACTIVE LOW
 #define OLED_CS_INACTIVE HIGH
 
-#define encR1 15
-#define encR2 16
-#define butR  13
+#ifdef FLIP_180
+  #define encL1 15
+  #define encL2 16
+  #define butL  13
 
-#define encL1 22
-#define encL2 21
-#define butL  23
+  #define encR1 22
+  #define encR2 21
+  #define butR  23
+#else
+  #define encR1 15
+  #define encR2 16
+  #define butR  13
+
+  #define encL1 22
+  #define encL2 21
+  #define butL  23
+#endif
 
 #define TU_GPIO_DEBUG_PIN1 30
 #define TU_GPIO_DEBUG_PIN2 29 // available on PCB
