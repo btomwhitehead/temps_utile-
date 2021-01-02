@@ -19,9 +19,6 @@
   #define CLK4 A14
   #define CLK5 2
   #define CLK6 9
-  
-  #define but_top 5
-  #define but_bot 4 
 #else
   #define CLK1 5
   #define CLK2 6
@@ -29,7 +26,15 @@
   #define CLK4 A14 // DAC channel; alt = 29
   #define CLK5 8
   #define CLK6 2
-  
+#endif
+
+#ifdef FLIP_180
+  #define but_top 12
+  #define but_bot 3
+#elif defined(_TEMPS_UTILE_REV_0)
+  #define but_top 5
+  #define but_bot 4
+#else
   #define but_top 3
   #define but_bot 12
 #endif
