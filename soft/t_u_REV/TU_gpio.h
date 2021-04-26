@@ -19,9 +19,6 @@
   #define CLK4 A14
   #define CLK5 2
   #define CLK6 9
-  
-  #define but_top 5
-  #define but_bot 4 
 #else
   #define CLK1 5
   #define CLK2 6
@@ -29,7 +26,15 @@
   #define CLK4 A14 // DAC channel; alt = 29
   #define CLK5 8
   #define CLK6 2
-  
+#endif
+
+#ifdef FLIP_180
+  #define but_top 12
+  #define but_bot 3
+#elif defined(_TEMPS_UTILE_REV_0)
+  #define but_top 5
+  #define but_bot 4
+#else
   #define but_top 3
   #define but_bot 12
 #endif
@@ -49,13 +54,23 @@
 #define OLED_CS_ACTIVE LOW
 #define OLED_CS_INACTIVE HIGH
 
-#define encR1 15
-#define encR2 16
-#define butR  13
+#ifdef FLIP_180
+  #define encL1 15
+  #define encL2 16
+  #define butL  13
 
-#define encL1 22
-#define encL2 21
-#define butL  23
+  #define encR1 22
+  #define encR2 21
+  #define butR  23
+#else
+  #define encR1 15
+  #define encR2 16
+  #define butR  13
+
+  #define encL1 22
+  #define encL2 21
+  #define butL  23
+#endif
 
 #define TU_GPIO_DEBUG_PIN1 30
 #define TU_GPIO_DEBUG_PIN2 29 // available on PCB
